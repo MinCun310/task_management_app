@@ -18,7 +18,6 @@ import { configValidationSchema } from "./config.schema";
             imports: [ConfigModule],
             inject: [ConfigService],
             useFactory: async (configService: ConfigService) => {
-                console.log('----->', configService.get('JWT_SECRET'));
                 return {
                     type: 'postgres',
                     autoLoadEntities: true,
